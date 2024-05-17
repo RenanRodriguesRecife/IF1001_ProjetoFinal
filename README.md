@@ -28,9 +28,23 @@ você coloca o início e destino ou o nome da cidade.
 Ideias
 - Só entra no app com convite
 
+Firulas:
+
+- Gamificação: ranking e achiviments, badges
+
 Reflexões:
 - Qual é o foco que se dá em uma viagem. (são as experiências)
 - pode ser que a idéia é que os hostels e as pessoas indiquem os pontos turiticos e os eventos.
 - Objetivo: Trazer vida e magia/encanto para as pessoas.
+
+
+
+
+- páginas:
+
+Perfil do usuário (estilo de perfil da steam) (poderá ter grupos, rotas feitas)
+login
+Tela inicial (mapa)
+Tela para mostrar os hosteis de um ponto a outro
 
 --->
