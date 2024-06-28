@@ -47,4 +47,14 @@ login
 Tela inicial (mapa)
 Tela para mostrar os hosteis de um ponto a outro
 
+
+Entidades:
+
+viajante
+Hostel
+rotas
+pontos turisticos
+eventos
+
+
 --->
