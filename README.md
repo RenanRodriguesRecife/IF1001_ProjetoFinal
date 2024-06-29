@@ -50,11 +50,61 @@ Tela para mostrar os hosteis de um ponto a outro
 
 Entidades:
 
-viajante
-Hostel
-rotas
-pontos turisticos
-eventos
+Viajante
+  - nome
+  - data de nascimento
+  - nacionalidade
+  - telefone
+  - email
+  - facebook
+  - instagram
+  (verificado: email, foto, facebook, telefone)(usuário ativo desde)
+  
+  - Nível de Perfil
+  - Anos de Serviço
+  - 
 
+  
+  - estado civil
+  - estado (Off-line e On-line)
+  - Deseja ficar anônimo
+
+  - Recomendações
+      -> Recomendações por lugar que você está
+
+  - Insignas
+  - Prêmios do perfil
+  - Rotas visitadas
+  - Lugares Visitados
+  - Hostels visitados
+  - Fotos
+  
+  
+Hostel
+  - Localização
+  - 
+
+Rotas
+  - Data
+  - Eventos
+  - Cidades
+  - Hostels
+  
+  
+Pontos turisticos
+  - Nome
+  - Cidade
+  - Localização
+  
+  - Fotos
+  
+Eventos
+
+
+Cidades
+  - Número de Hostels
+  - Número de anfitriões
+  - Pontos turisticos
+  - Eventos
 
 --->
