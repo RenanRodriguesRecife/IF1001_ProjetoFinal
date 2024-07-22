@@ -2,6 +2,7 @@
 
 Tarefa: Fazer um Aplicativo que queira desenvolver
 
+
 <!--
 Ideia de Aplicativo:
 
@@ -106,5 +107,9 @@ Cidades
   - Número de anfitriões
   - Pontos turisticos
   - Eventos
+
+
+Links:
+https://www.youtube.com/watch?v=h-NcxT697Nk
 
 --->
