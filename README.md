@@ -112,4 +112,5 @@ Cidades
 Links:
 https://www.youtube.com/watch?v=h-NcxT697Nk
 
+recicle view dinamica - https://www.youtube.com/watch?v=qc_moNOEQmk
 --->
