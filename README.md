@@ -113,4 +113,6 @@ Links:
 https://www.youtube.com/watch?v=h-NcxT697Nk
 
 recicle view dinamica - https://www.youtube.com/watch?v=qc_moNOEQmk
+
+search bar - https://www.youtube.com/watch?v=q91GB08OL54
 --->
