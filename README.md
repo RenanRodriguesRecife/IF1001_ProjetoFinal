@@ -111,6 +111,7 @@ Cidades
 
 Links:
 fragment - https://www.youtube.com/watch?v=h-NcxT697Nk
+https://www.youtube.com/watch?v=L_6poZGNXOo
 
 recicle view dinamica - https://www.youtube.com/watch?v=qc_moNOEQmk
 
