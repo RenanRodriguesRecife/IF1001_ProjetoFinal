@@ -118,4 +118,12 @@ recicle view dinamica - https://www.youtube.com/watch?v=qc_moNOEQmk
 search bar - https://www.youtube.com/watch?v=q91GB08OL54
 
 pop fragment - https://www.youtube.com/watch?v=db7-AyqvaLA
+
+
+notificações:
+
+- Viajantes próximo (basica)
+- Promoções perto (extendida)
+- Pedido de solicitação de amizade (ação)
+- Mensagens (notificação Reply)
 --->
