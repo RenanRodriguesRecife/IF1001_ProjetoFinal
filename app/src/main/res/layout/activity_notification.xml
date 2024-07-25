@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".notification">
+
+    <Button
+        android:id="@+id/basic_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="199dp"
+
+        android:layout_marginBottom="200dp"
+        android:text="Viajantes proximo"
+        app:layout_constraintBottom_toTopOf="@+id/action_notification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/reply_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:text="Mensagens"
+        app:layout_constraintStart_toStartOf="@+id/basic_notification"
+        app:layout_constraintTop_toBottomOf="@+id/basic_notification" />
+
+    <Button
+        android:id="@+id/action_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="236dp"
+        android:text="Solicitação de amizade"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/extend_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="37dp"
+        android:text="Promoção perto"
+        app:layout_constraintBottom_toTopOf="@+id/action_notification"
+        app:layout_constraintStart_toStartOf="@+id/action_notification" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

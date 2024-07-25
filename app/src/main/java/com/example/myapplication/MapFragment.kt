@@ -1,12 +1,13 @@
 package com.example.myapplication
 
-import androidx.fragment.app.Fragment
-
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
@@ -14,6 +15,9 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
 class MapFragment : Fragment() {
+
+    private val sharedViewModel: SharedViewModel by activityViewModels()
+
 
     private val callback = OnMapReadyCallback { googleMap ->
         /**
@@ -35,12 +39,28 @@ class MapFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_map, container, false)
+        val view = inflater.inflate(R.layout.fragment_map, container, false)
+
+        sharedViewModel.selectedIncio.observe(viewLifecycleOwner, Observer {
+            item ->
+            Log.e(item,"Teste Inicio")
+        })
+
+        sharedViewModel.selectedDestino.observe(viewLifecycleOwner, Observer {
+                item ->
+            Log.e(item,"Teste destino")
+        })
+
+
+
+        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
+
         mapFragment?.getMapAsync(callback)
+
     }
 }
