@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".notification">
+    tools:context=".Notification">
 
     <Button
         android:id="@+id/basic_notification"

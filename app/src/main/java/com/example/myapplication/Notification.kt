@@ -12,9 +12,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 
 
-class notification : AppCompatActivity() {
+class Notification : AppCompatActivity() {
 
     val mNotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
