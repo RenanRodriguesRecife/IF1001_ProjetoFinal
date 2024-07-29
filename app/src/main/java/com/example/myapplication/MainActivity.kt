@@ -61,6 +61,11 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent);
                 true
             }
+            R.id.api ->{
+                val intent = Intent(this,ApiRequest::class.java);
+                startActivity(intent);
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
 

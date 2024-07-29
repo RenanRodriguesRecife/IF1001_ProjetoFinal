@@ -15,5 +15,13 @@
         android:icon="@drawable/baseline_adb_24"
         app:showAsAction="ifRoom">
     </item>
+    <item
+        android:title="Data Management"
+        android:id="@+id/data">
+    </item>
+    <item
+        android:title="API Request"
+        android:id="@+id/api">
+    </item>
 
 </menu>
