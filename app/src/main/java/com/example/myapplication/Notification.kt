@@ -2,21 +2,25 @@ package com.example.myapplication
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import androidx.core.app.RemoteInput
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 
 //- Viajantes próximo (basica)
-//- Promoções perto (extendida)
+//- Promoções perto (expandida)
 //- Pedido de solicitação de amizade (ação)
 //- Mensagens (notificação Reply)
 
@@ -36,13 +40,122 @@ class Notification : AppCompatActivity() {
             insets
         }
 
-        createNotificationChannel(CHANNEL_ID1,"TEste")
-        basicNotification(CHANNEL_ID1,"teste","ghflsdkhgjfklsd")
+        var button1 = findViewById<Button>(R.id.basic_notification) as Button
+        var button2 = findViewById<Button>(R.id.extend_notification) as Button
+        var button3 = findViewById<Button>(R.id.action_notification) as Button
+        var button4 = findViewById<Button>(R.id.reply_notification) as Button
+
+
+        button2.setOnClickListener {
+            createNotificationChannel(CHANNEL_ID2,"Promoções perto","gfhjakslfdhjskal")
+            expandedNotification(CHANNEL_ID2,"teste2","ghflsdkhgjfklsd","TESTETESJKLTSJKTLÇSJKTLSÇJKTLSÇJKSLÇJKLÇSJKELT")
+        }
+
+        button1.setOnClickListener {
+            createNotificationChannel(CHANNEL_ID1,"mensagem","balkadfhjkalsdfjh")
+            basicNotification(CHANNEL_ID1,"teste1","ghflsdkhgjfklsd")
+        }
+
+        button3.setOnClickListener {
+            createNotificationChannel(CHANNEL_ID3,"action","balkadfhjkalsdfjh")
+            actionNotification(CHANNEL_ID3,"teste3","gfjkdlsaçgjkflsçjgkflç")
+        }
+
 
     }
 
+    private fun replyNotification(channel: String,title:String,text: String, messager: String){
+        val KEY_TEXT_REPLY = "data"
+
+        val snoozeIntent = Intent(this, CustomBroadcastReceiver2::class.java).apply {
+            action = "com.aimiris.demos.blah2"
+        }
+
+        var replyLabel: String = messager
+        var remoteInput: RemoteInput = RemoteInput.Builder(KEY_TEXT_REPLY).run{
+            setLabel(replyLabel)
+            build()
+        }
+        //PendingIntent
+        var replyPendingIntent: PendingIntent =
+            PendingIntent.getBroadcast(applicationContext,
+                111,
+                snoozeIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT)
+        var action: NotificationCompat.Action =
+            NotificationCompat.Action.Builder(
+                androidx.core.R.drawable.notification_icon_background,"Reply",replyPendingIntent)
+                .addRemoteInput(remoteInput)
+                .build()
+        val builder = NotificationCompat.Builder(this,channel)
+            .setSmallIcon(R.mipmap.ic_launcher)
+            .setContentTitle(title)
+            .setContentText(text)
+            .addAction(action)
+            .setAutoCancel(true)
+        with(NotificationManagerCompat.from(this)) {
+            if (ActivityCompat.checkSelfPermission(
+                    applicationContext,
+                    android.Manifest.permission.POST_NOTIFICATIONS
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                return
+            }
+            notify(1, builder.build())
+        }
 
 
+    }
+
+    private fun actionNotification(channel: String,title: String,text:String) {
+        val snoozeIntent = Intent(this, CustomBroadcastReceiver::class.java).apply {
+            action = "com.aimiris.demos.blah"
+            putExtra("data", "666")
+        }
+        val snoozePedingIntent: PendingIntent =
+            PendingIntent.getBroadcast(this, 0, snoozeIntent, PendingIntent.FLAG_IMMUTABLE)
+        val builder = NotificationCompat.Builder(this, channel)
+            .setSmallIcon(androidx.core.R.drawable.notification_icon_background)
+            .setContentTitle(title)
+            .setContentText(text)
+            .setContentIntent(snoozePedingIntent)
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .addAction(R.drawable.ic_launcher_foreground, "text", snoozePedingIntent)
+            .setAutoCancel(true)
+        with(NotificationManagerCompat.from(this)) {
+            if (ActivityCompat.checkSelfPermission(
+                    applicationContext,
+                    android.Manifest.permission.POST_NOTIFICATIONS
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                return
+            }
+            notify(1, builder.build())
+        }
+    }
+
+
+    private fun expandedNotification(channel: String,title: String,text: String,bigText: String){
+        val builder = NotificationCompat.Builder(this,channel)
+            .setSmallIcon(R.mipmap.ic_launcher)
+            .setContentTitle(title)
+            .setContentText(text)
+            .setAutoCancel(true)
+            .setStyle(NotificationCompat.BigTextStyle()
+                .bigText(bigText))
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+
+        with(NotificationManagerCompat.from(this)){
+            if(ActivityCompat.checkSelfPermission(
+                    applicationContext,
+                    android.Manifest.permission.POST_NOTIFICATIONS
+                ) != PackageManager.PERMISSION_GRANTED
+            ){
+                return
+            }
+            notify(1,builder.build())
+        }
+    }
 
     private fun basicNotification(channel: String,title: String, text: String){
         var builder = NotificationCompat.Builder(this, channel)
@@ -63,11 +176,11 @@ class Notification : AppCompatActivity() {
         }
     }
 
-    private fun createNotificationChannel(chanelid: String, description: String){
+    private fun createNotificationChannel(chanelid: String, name: String,description: String){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             val channel = NotificationChannel(
                 chanelid,
-                "First channel", NotificationManager.IMPORTANCE_DEFAULT)
+                name, NotificationManager.IMPORTANCE_DEFAULT)
                     channel.description = description
 
 
