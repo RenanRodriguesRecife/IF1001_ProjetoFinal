@@ -56,6 +56,11 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent);
                 true
             }
+            R.id.user ->{
+                val intent = Intent(this,UserProfile::class.java);
+                startActivity(intent);
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
 
