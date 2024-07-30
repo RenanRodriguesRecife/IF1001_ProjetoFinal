@@ -8,79 +8,84 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="403dp"
+        android:layout_height="227dp"
         android:background="#673AB7"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="16:9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="4dp">
 
         <TextView
             android:id="@+id/nome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="16dp"
             android:text="Nome do Hostel"
             android:textAlignment="center"
             android:textColor="#FFF"
             android:textSize="20sp"
-            tools:layout_editor_absoluteX="149dp"
-            tools:layout_editor_absoluteY="16dp" />
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
             android:text="Valor"
             android:textAlignment="center"
             android:textColor="#FFF"
             android:textSize="24sp"
-            tools:layout_editor_absoluteX="332dp"
-            tools:layout_editor_absoluteY="16dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/nota"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
             android:text="Avaliação"
             android:textAlignment="center"
             android:textColor="#FFF"
             android:textSize="20sp"
-            tools:layout_editor_absoluteX="149dp"
-            tools:layout_editor_absoluteY="54dp" />
+            app:layout_constraintStart_toStartOf="@+id/nome"
+            app:layout_constraintTop_toBottomOf="@+id/nome" />
 
         <TextView
             android:id="@+id/cidade"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Cidade"
             android:textAlignment="center"
             android:textColor="#FFF"
             android:textSize="20sp"
-            tools:layout_editor_absoluteX="149dp"
-            tools:layout_editor_absoluteY="91dp" />
+            app:layout_constraintStart_toStartOf="@+id/nota"
+            app:layout_constraintTop_toBottomOf="@+id/nota" />
 
         <TextView
             android:id="@+id/distancia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:text="distancia do centro"
             android:textAlignment="center"
             android:textColor="#FFF"
             android:textSize="20sp"
-            tools:layout_editor_absoluteX="223dp"
-            tools:layout_editor_absoluteY="91dp" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/cidade"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@tools:sample/avatars" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

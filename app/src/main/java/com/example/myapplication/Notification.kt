@@ -60,6 +60,10 @@ class Notification : AppCompatActivity() {
             createNotificationChannel(CHANNEL_ID3,"action","balkadfhjkalsdfjh")
             actionNotification(CHANNEL_ID3,"teste3","gfjkdlsaçgjkflsçjgkflç")
         }
+        button4.setOnClickListener{
+            createNotificationChannel(CHANNEL_ID4,"reṕly message","balkadfhjkalsdfjh")
+            replyNotification(CHANNEL_ID4,"reply","fjdksalçfjkdlsçajfkldç","fdjsakfdasjklç")
+        }
 
 
     }

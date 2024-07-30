@@ -17,9 +17,12 @@ class HomeFragment : Fragment() {
 
     val items = arrayListOf(
         0 to "Item A",
-        2 to "Item B",
-        3 to "Item C",
-        4 to "Item D"
+        1 to "Item B",
+        2 to "Item C",
+        3 to "Item D",
+        4 to "Item D",
+        2 to "Item C",
+
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,7 +58,13 @@ class MyAdapter(private val items: List<Pair<Int, String>>): RecyclerView.Adapte
             if (viewType == 0) {
                 LayoutInflater.from(parent.context).inflate(R.layout.item_b, parent, false)
 
-            } else {
+            }else if (viewType == 1) {
+                LayoutInflater.from(parent.context).inflate(R.layout.item_c, parent, false)
+
+            }else if (viewType == 2) {
+                LayoutInflater.from(parent.context).inflate(R.layout.item_d, parent, false)
+
+            }  else {
                 LayoutInflater.from(parent.context).inflate(R.layout.item_a, parent, false)
 
             }

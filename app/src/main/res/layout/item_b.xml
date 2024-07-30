@@ -13,5 +13,6 @@
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        tools:srcCompat="@tools:sample/backgrounds/scenic"
+        android:src="@drawable/ic_launcher_background"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

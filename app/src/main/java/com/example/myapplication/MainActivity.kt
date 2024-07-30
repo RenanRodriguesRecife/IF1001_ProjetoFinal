@@ -66,6 +66,21 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent);
                 true
             }
+            R.id.dm_internal ->{
+                val intent = Intent(this,DMinternal::class.java);
+                startActivity(intent);
+                true
+            }
+            R.id.dm_internal_cache ->{
+                val intent = Intent(this,DMinternalCache::class.java);
+                startActivity(intent);
+                true
+            }
+            R.id.dm_external->{
+                val intent = Intent(this,DMExternal::class.java);
+                startActivity(intent);
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
 
