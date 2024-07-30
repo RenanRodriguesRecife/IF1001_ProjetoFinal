@@ -17,4 +17,7 @@ class DMExternal : AppCompatActivity() {
             insets
         }
     }
+
+
+
 }

@@ -9,91 +9,88 @@
 
 
     <Button
-        android:id="@+id/btn_getFile"
+        android:id="@+id/btn_getCacheDir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Get File"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="9dp"
+        android:text="Get Cache Dir"
+        app:layout_constraintBottom_toTopOf="@+id/btn_createCacheDir"
+        app:layout_constraintStart_toStartOf="@+id/btn_createCacheDir" />
+
+    <Button
+        android:id="@+id/btn_createCacheDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:text="Create Cache Dir"
+        app:layout_constraintBottom_toTopOf="@+id/btn_createCacheTmpFile"
+        app:layout_constraintEnd_toEndOf="@+id/btn_createCacheTmpFile" />
+
+    <Button
+        android:id="@+id/btn_createCacheTmpFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="327dp"
+        android:text="Create Cache Tmp File"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
-
-    <Button
-        android:id="@+id/btn_getAllFiles"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="7dp"
-        android:text="Get All Files"
-        app:layout_constraintStart_toStartOf="@+id/btn_writeFile"
-        app:layout_constraintTop_toBottomOf="@+id/btn_getFile" />
-
-    <Button
-        android:id="@+id/btn_createDir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:text="Create Dir"
-        app:layout_constraintStart_toStartOf="@+id/btn_getAllFiles"
-        app:layout_constraintTop_toBottomOf="@+id/btn_getAllFiles" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginBottom="40dp"
         android:ems="10"
         android:hint="File Name"
         android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editTextText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginBottom="24dp"
         android:ems="10"
         android:hint="Value"
         android:inputType="text"
-        app:layout_constraintStart_toStartOf="@+id/editTextText3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_getCacheDir"
+        app:layout_constraintStart_toStartOf="@+id/editTextText3" />
 
     <Button
-        android:id="@+id/btn_writeFile"
+        android:id="@+id/btn_createCacheFile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:text="Escrevendo Arquivo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_createDir" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Create Cache File"
+        app:layout_constraintStart_toStartOf="@+id/btn_createCacheTmpFile"
+        app:layout_constraintTop_toBottomOf="@+id/btn_createCacheTmpFile" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
         android:gravity="center"
         android:text="text"
         android:textAlignment="center"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.733" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_getCacheFile" />
 
     <Button
-        android:id="@+id/btn_readFile"
+        android:id="@+id/btn_getCacheFile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:text="Lendo Arquivo"
-        app:layout_constraintStart_toStartOf="@+id/btn_writeFile"
-        app:layout_constraintTop_toBottomOf="@+id/btn_writeFile" />
+        android:layout_marginStart="10dp"
+        android:text="Get Cache File"
+        app:layout_constraintStart_toStartOf="@+id/btn_createCacheFile"
+        app:layout_constraintTop_toBottomOf="@+id/btn_createCacheFile" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
