@@ -2,6 +2,7 @@
 
 Tarefa: Fazer um Aplicativo que queira desenvolver
 
+Use a API 33
 
 <!--
 Ideia de Aplicativo:
