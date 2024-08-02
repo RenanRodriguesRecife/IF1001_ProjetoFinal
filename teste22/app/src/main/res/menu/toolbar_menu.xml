@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Notification"
+        android:id="@+id/notification"
+        android:icon="@drawable/baseline_circle_notifications_24"
+        app:showAsAction="ifRoom">
+
+    </item>
+    <item
+        android:title="Usuario"
+        android:id="@+id/user"
+        android:icon="@drawable/baseline_adb_24"
+        app:showAsAction="ifRoom">
+    </item>
+    <item
+        android:title="Data Management"
+        android:id="@+id/data">
+    </item>
+    <item
+        android:title="API Request"
+        android:id="@+id/api">
+    </item>
+    <item
+        android:title="Data Management - interno"
+        android:id="@+id/dm_internal">
+    </item>
+
+    <item
+        android:title="Data Management - interno - Cache"
+        android:id="@+id/dm_internal_cache">
+    </item>
+    <item
+        android:title="Data Management - externo"
+        android:id="@+id/dm_external">
+    </item>
+</menu>
