@@ -68,4 +68,7 @@ dependencies {
     // Add the dependency for the Firebase Authentication library
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation("com.google.firebase:firebase-auth")
+
+    //Request API
+    implementation ("com.android.volley:volley:1.2.1")
 }

@@ -66,11 +66,11 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent);
                 true
             }
-//            R.id.api ->{
-//                val intent = Intent(this,ApiRequest::class.java);
-//                startActivity(intent);
-//                true
-//            }
+            R.id.api ->{
+                val intent = Intent(this,WeatherRequest::class.java);
+                startActivity(intent);
+                true
+            }
 //            R.id.dm_internal ->{
 //                val intent = Intent(this,DMinternal::class.java);
 //                startActivity(intent);

@@ -32,14 +32,15 @@ class MapFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Initialize the map
+        // Initialize  map
         map = view.findViewById(R.id.map)
         Configuration.getInstance().userAgentValue = BuildConfig.APPLICATION_ID
         map.setTileSource(TileSourceFactory.MAPNIK)
 
-        // Set default zoom level and center position
+        // Set default zoom
+        // Set level and center position
         map.controller.setZoom(15.0)
-        val startPoint = GeoPoint(48.8583, 2.2944) // Example coordinates (Eiffel Tower)
+        val startPoint = GeoPoint(48.8583, 2.2944) // Cordenadas da Torre Eiffel
         map.controller.setCenter(startPoint)
     }
 
